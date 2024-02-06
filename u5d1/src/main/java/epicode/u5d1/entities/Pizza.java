@@ -25,11 +25,11 @@ public class Pizza extends Element {
 
     @Override
     public String toString() {
-        return "Pizza{" +
-                "toppings: " + toppings +
-                ", name=' " + name + '\'' +
-                ", calories=" + calories +
-                ", price=" + price +
-                "} " +'\n';
+        return "Pizza: " +
+                "-name:' " + name + '\'' +
+                "- toppings: " + toppings +
+                "- calories:" + calories +
+                "- price:" + price +
+                "} " + '\n';
     }
 }

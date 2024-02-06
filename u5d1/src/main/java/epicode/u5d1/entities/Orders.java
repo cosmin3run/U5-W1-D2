@@ -5,6 +5,7 @@ import epicode.u5d1.superclass.Element;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -25,6 +26,30 @@ public class Orders {
         this.orderStatus = orderStatus;
         this.costumers = costumers;
         this.orderTime = orderTime;
+    }
+
+    public void printOrder() {
+        System.out.println("Order");
+        System.out.println("table number " + table);
+        ;
+        System.out.println();
+
+        System.out.println("Items: ");
+        this.orderList.forEach(System.out::println);
+        System.out.println();
+
+        System.out.println(this.numOrder);
+        System.out.println();
+
+        System.out.println(this.orderStatus);
+        System.out.println();
+
+        System.out.println(this.costumers);
+        System.out.println();
+
+        System.out.println(this.orderTime);
+
+
     }
 
     @Override
