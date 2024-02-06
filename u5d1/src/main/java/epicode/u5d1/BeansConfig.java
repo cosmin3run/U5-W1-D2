@@ -1,9 +1,7 @@
 package epicode.u5d1;
 
-import epicode.u5d1.entities.Drinks;
-import epicode.u5d1.entities.MenuList;
-import epicode.u5d1.entities.Pizza;
-import epicode.u5d1.entities.Toppings;
+import epicode.u5d1.entities.*;
+import epicode.u5d1.enums.TableStatus;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -105,6 +103,11 @@ public class BeansConfig {
 
 
         return new MenuList(pizzas, drinks, toppings );
+    }
+
+    @Bean
+    Table table(){
+        return new Table(1,6, TableStatus.FREE);
     }
 
 }
